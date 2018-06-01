@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musical experience</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
+</head>
+<body>
+        <a-scene>
+            <a-assets>
+                <img id="wall-face" src="src/img/walls.png" crossorigin="anonymous" />
+                <img id="wall-right" src="src/img/walls.png" crossorigin="anonymous" />
+                <img id="wall-left" src="src/img/walls.png" crossorigin="anonymous" />
+                <img id="wall-back" src="src/img/walls.png" crossorigin="anonymous" />
+                <a-asset-item id="guitar-table" src="src/objects/guitar-table/guitar-type-1.obj"></a-asset-item>
+                <a-asset-item id="guitar-table-mtl" src="src/objects/guitar-table/guitar-type-1.mtl"></a-asset-item>
+            </a-assets>
+                <!-- OBJ -->
+                <a-gltf-model src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-3 1 7"></a-gltf-model>
+                <a-gltf-model src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="-8 0 9" rotation="0 -90 0"></a-gltf-model>
+                <a-gltf-model src="src/objects/jukebox/scene.gltf" scale="0.135 0.135 0.135" position="-8 0 5.5" rotation="0 90 0"></a-gltf-model>
+                <a-gltf-model src="src/objects/bar/scene.gltf" scale="5 2 2" position="-2.5 1.5 10"></a-gltf-model>
+                <a-gltf-model src="src/objects/wow_human/scene.gltf" scale="0.052 0.052 0.052"></a-gltf-model>
+                <a-entity obj-model="obj: #guitar-table; mtl: #guitar-table-mtl" position="4.5 0.5 6.5" rotation="0 90 0" scale="0.3 0.3 0.3"></a-entity>
+
+            <!-- WALLS -->
+            <a-entity geometry="primitive: plane; height: 16.2; width: 16" position="0. 5.5 3.923" rotation="90 0 0" material="color:red"></a-entity>
+            <a-entity geometry="primitive: plane; height: 6; width: 16" position="0 2.5 -4.1" material="src:#wall-face"></a-entity>
+            <a-entity geometry="primitive: plane; height: 6; width: 16" position="0 2.5 11.9" rotation="180 0 0" material="src:#wall-back"></a-entity>
+            <a-entity geometry="primitive: plane; height: 6; width: 16" position="8 2.5 3.9" rotation="0 -90 0" material="src:#wall-right"></a-entity>
+            <a-entity geometry="primitive: plane; height: 6; width: 16" position="-8 2.5 3.9" rotation="0 90 0" material="src:#wall-left"></a-entity>
+            <a-camera>
+                <a-cursor>
+                    <a-animation begin="click" easing="ease-in" attribute="scale"
+                                fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                </a-cursor>
+            </a-camera>
+            <a-sky id="sky" color="#F5D1B0"></a-sky>
+            <a-plane id="ground" color="grey" rotation="-90 0 0" width="500" height="500"></a-plane>
+          </a-scene>
+      </body>
+</html>
