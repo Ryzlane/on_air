@@ -13,6 +13,9 @@
 <body>
         <a-scene>
             <a-assets>
+                <img id="wall-ceiling" src="src/img/ceiling.jpg" crossorigin="anonymous" />
+                <img id="wall-ground" src="src/img/ground.png" crossorigin="anonymous" />
+                <img id="scene-texture" src="src/img/ceiling.jpg" crossorigin="anonymous" />
                 <img id="wall-face" src="src/img/walls.png" crossorigin="anonymous" />
                 <img id="wall-right" src="src/img/walls.png" crossorigin="anonymous" />
                 <img id="wall-left" src="src/img/walls.png" crossorigin="anonymous" />
@@ -23,31 +26,38 @@
                 <a-asset-item id="coffe-table-mtl" src="src/objects/wooden-coffe-table/wooden-coffe-table.mtl"></a-asset-item>
             </a-assets>
             
-                <!-- OBJ -->
-                <!-- On the scene-->
-                <a-gltf-model src="src/objects/drum-set/scene.gltf" scale="0.7 0.7 0.7"></a-gltf-model>
-                <a-gltf-model src="src/objects/speaker/scene.gltf" scale="0.02 0.02 0.02"></a-gltf-model>
-                <a-gltf-model src="src/objects/microphone/scene.gltf" scale="0.02 0.02 0.02"></a-gltf-model>
-                <a-gltf-model src="src/objects/guitar/scene.gltf" scale="0.7 0.7 0.7"></a-gltf-model>
-                <a-gltf-model src="src/objects/electric-guitar/scene.gltf" scale="0.7 0.7 0.7"></a-gltf-model>
-                <!-- In the bar-->
-                <a-entity obj-model="obj: #guitar-table; mtl: #guitar-table-mtl" position="4.5 0.5 6.5" rotation="0 90 0" scale="0.3 0.3 0.3"></a-entity>
-                <a-entity obj-model="obj: #coffe-table; mtl: #coffe-table-mtl"></a-entity>
-                <a-gltf-model src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-3 1 7"></a-gltf-model>
-                <a-gltf-model src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="-8 0 9" rotation="0 -90 0"></a-gltf-model>
-                <a-gltf-model src="src/objects/jukebox/scene.gltf" scale="0.135 0.135 0.135" position="-8 0 5.5" rotation="0 90 0"></a-gltf-model>
-                <a-gltf-model src="src/objects/bar/scene.gltf" scale="5 2 2" position="-2.5 1.5 10"></a-gltf-model>
-                <a-gltf-model src="src/objects/wow-human/scene.gltf" scale="0.052 0.052 0.052"></a-gltf-model>
-                <a-gltf-model src="src/objects/rustic-chair/scene.gltf" scale="0.002 0.002 0.002"></a-gltf-model>
-                <a-gltf-model src="src/objects/neon/scene.gltf"></a-gltf-model>
-                <!-- <a-gltf-model src="src/objects/couch/scene.gltf" scale="1 1 1"></a-gltf-model> -->
+                <!-- Scene-->
+                <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
+                <a-gltf-model id="drum" src="src/objects/drum-set/scene.gltf" scale="0.5 0.5 0.5" position="4.25 0.5 -1.25" rotation="0 145 0"></a-gltf-model>
+                <a-gltf-model id="speaker" src="src/objects/speaker/scene.gltf" scale="0.02 0.02 0.02"></a-gltf-model>
+                <a-gltf-model id="microphone" src="src/objects/microphone/scene.gltf" scale="0.01 0.01 0.01" position="0 0.5 1"></a-gltf-model>
+                <a-gltf-model id="guitar" src="src/objects/guitar/scene.gltf" scale="0.25 0.25 0.25" rotation="0 45 90" position="2.5 0.5 0.6"></a-gltf-model>
+                <a-gltf-model id="electric-guitar" src="src/objects/electric-guitar/scene.gltf" scale="0.3 0.3 0.3"  rotation="0 45 0" position="-4.5 0.5 0"></a-gltf-model>
+                <!-- Bar -->
+                <a-entity id="coffee-table-1" obj-model="obj: #coffe-table; mtl: #coffe-table-mtl" scale="0.8 0.8 0.8" position="-3.3 0.135 4.5"></a-entity>
+                <a-gltf-model id="chair-1" src="src/objects/rustic-chair/scene.gltf" scale="0.0015 0.0015 0.0015" rotation="0 135 0" position="-3 0.69 4.50"></a-gltf-model>
+                <a-gltf-model id="chair-2" src="src/objects/rustic-chair/scene.gltf" scale="0.0015 0.0015 0.0015" rotation="0 -135 0" position="-3.5 0.69 4.50"></a-gltf-model>
+                <a-entity id="coffee-table-2" obj-model="obj: #coffe-table; mtl: #coffe-table-mtl" scale="0.8 0.8 0.8" position="1.5 0.135 4.5"></a-entity>
+                <a-gltf-model id="chair-3" src="src/objects/rustic-chair/scene.gltf" scale="0.0015 0.0015 0.0015" rotation="0 135 0" position="1.5 0.69 4.50"></a-gltf-model>
+                <a-gltf-model id="chair-4" src="src/objects/rustic-chair/scene.gltf" scale="0.0015 0.0015 0.0015" rotation="0 -135 0" position="1.5 0.69 4.50"></a-gltf-model>
+                <a-gltf-model id="stool-1" src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-4 1 8.5"></a-gltf-model>
+                <a-gltf-model id="stool-2" src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-2 1 8.5"></a-gltf-model>
+                <a-gltf-model id="stool-3" src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="0 1 8.5"></a-gltf-model>
+                <a-gltf-model id="door" src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="-7 0 5.2" rotation="0 -90 0"></a-gltf-model>
+                <a-gltf-model id="jukebox" src="src/objects/jukebox/scene.gltf" scale="0.135 0.135 0.135" position="-7 0 3.2" rotation="0 90 0"></a-gltf-model>
+                <a-gltf-model id="bar" src="src/objects/bar/scene.gltf" scale="4.5 4.5 2.8" position="-2.5 2.5 11.3"></a-gltf-model>
+                <a-gltf-model id="human" src="src/objects/wow-human/scene.gltf" scale="0.052 0.052 0.052"></a-gltf-model>
+                <a-gltf-model id="neon" src="src/objects/neon/scene.gltf" scale="0.3 0.3 0.3" rotation="0 -90 0" position="6.9 2 8.5"></a-gltf-model>></a-gltf-model>
+                <a-gltf-model id="sofa" src="src/objects/sofa/scene.gltf" scale="0.003 0.003 0.003" rotation="0 -90 0" position="6.2 0 5"></a-gltf-model>
+                <a-entity id="guitar-table" obj-model="obj: #guitar-table; mtl: #guitar-table-mtl" position="4.7 0.5 5" rotation="0 90 0" scale="0.3 0.3 0.3"></a-entity>
 
             <!-- WALLS -->
-            <a-entity geometry="primitive: plane; height: 16.2; width: 16" position="0. 5.5 3.923" rotation="90 0 0" material="color:red"></a-entity>
-            <a-entity geometry="primitive: plane; height: 6; width: 16" position="0 2.5 -4.1" material="src:#wall-face"></a-entity>
-            <a-entity geometry="primitive: plane; height: 6; width: 16" position="0 2.5 11.9" rotation="180 0 0" material="src:#wall-back"></a-entity>
-            <a-entity geometry="primitive: plane; height: 6; width: 16" position="8 2.5 3.9" rotation="0 -90 0" material="src:#wall-right"></a-entity>
-            <a-entity geometry="primitive: plane; height: 6; width: 16" position="-8 2.5 3.9" rotation="0 90 0" material="src:#wall-left"></a-entity>
+            <a-plane geometry="height: 14; width: 14" position="0 5 2.889" rotation="90 0 0" material="src:#wall-ceiling"></a-plane>
+            <a-plane geometry="height: 5; width: 14" position="0 2.5 -4.1" material="src:#wall-face"></a-plane>
+            <a-plane geometry="height: 5; width: 14" position="0 2.5 11.8" rotation="180 0 0" material="src:#wall-back"></a-plane>
+            <a-plane geometry="height: 5; width: 16" position="7 2.5 3.888" rotation="0 -90 0" material="src:#wall-right"></a-plane>
+            <a-plane geometry="height: 5; width: 16" position="-7 2.5 3.888" rotation="0 90 0" material="src:#wall-left"></a-plane>
+            <a-plane id="ground" rotation="-90 0 0"  position="0 0 3.923" geometry="height: 16; width: 14" material="src:#wall-ground"></a-plane>
             <a-camera>
                 <a-cursor>
                     <a-animation begin="click" easing="ease-in" attribute="scale"
@@ -55,7 +65,6 @@
                 </a-cursor>
             </a-camera>
             <a-sky id="sky" color="#F5D1B0"></a-sky>
-            <a-plane id="ground" color="grey" rotation="-90 0 0" width="500" height="500"></a-plane>
           </a-scene>
       </body>
 </html>
