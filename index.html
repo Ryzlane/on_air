@@ -16,13 +16,15 @@
         </div>
         <a-scene>
             <a-assets>
-                <img id="wall-ceiling" src="src/img/ceiling.jpg" crossorigin="anonymous" />
-                <img id="wall-ground" src="src/img/ground.png" crossorigin="anonymous" />
-                <img id="scene-texture" src="src/img/ceiling.jpg" crossorigin="anonymous" />
-                <img id="wall-face" src="src/img/walls.png" crossorigin="anonymous" />
-                <img id="wall-right" src="src/img/walls.png" crossorigin="anonymous" />
-                <img id="wall-left" src="src/img/walls.png" crossorigin="anonymous" />
-                <img id="wall-back" src="src/img/walls.png" crossorigin="anonymous" />
+                <img id="wall-ceiling" src="src/img/ceiling.jpg" alt="ceiling" crossorigin="anonymous" />
+                <img id="wall-ground" src="src/img/ground.png" alt="ground" crossorigin="anonymous" />
+                <img id="scene-texture" src="src/img/ceiling.jpg" alt="scene" crossorigin="anonymous" />
+                <img id="wall-face" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
+                <img id="wall-right" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
+                <img id="wall-left" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
+                <img id="wall-back" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
+                <img id="rockabilly-poster" src="src/img/rockabilly-poster.png" alt="poster">
+                <audio id="audio" src="src/musics/choice1-blues.mp3"></audio>
                 <a-asset-item id="guitar-table" src="src/objects/guitar-table/guitar-type-1.obj"></a-asset-item>
                 <a-asset-item id="guitar-table-mtl" src="src/objects/guitar-table/guitar-type-1.mtl"></a-asset-item>
                 <a-asset-item id="coffe-table" src="src/objects/wooden-coffe-table/wooden-coffe-table.obj"></a-asset-item>
@@ -36,7 +38,8 @@
                 <a-gltf-model id="microphone" src="src/objects/microphone/scene.gltf" scale="0.01 0.01 0.01" position="0 0.5 1"></a-gltf-model>
                 <a-gltf-model id="guitar" src="src/objects/guitar/scene.gltf" scale="0.25 0.25 0.25" rotation="0 45 90" position="2.5 0.5 0.6"></a-gltf-model>
                 <a-gltf-model id="electric-guitar" src="src/objects/electric-guitar/scene.gltf" scale="0.3 0.3 0.3"  rotation="0 45 0" position="-4.5 0.5 0"></a-gltf-model>
-
+                <!-- Posters -->
+                <a-plane id="poster-face" handle-events sound="src:#audio; on: click" geometry="height: 2; width: 3;" material="src:#rockabilly-poster" position="0 1.83 -4.017" scale="0.375 0.732 1"></a-plane>
                 <!-- BAR -->
                 <!-- Tables -->
                 <a-entity id="coffee-table-1" obj-model="obj: #coffe-table; mtl: #coffe-table-mtl" scale="0.8 0.8 0.8" position="-3.3 0.135 4.5"></a-entity>
@@ -50,7 +53,7 @@
                 <a-gltf-model id="sofa" src="src/objects/sofa/scene.gltf" scale="0.003 0.003 0.003" rotation="0 -90 0" position="6.2 0 5"></a-gltf-model>
                 <a-entity id="guitar-table" obj-model="obj: #guitar-table; mtl: #guitar-table-mtl" position="4.7 0.5 5" rotation="0 90 0" scale="0.3 0.3 0.3"></a-entity>
                 <a-gltf-model src="src/objects/whisky-bottle-glass/scene.gltf" position="-3.403 1.418 4.781" scale="0.05 0.05 0.05"></a-gltf-model>                
-                <!-- COUNTER -->
+                <!-- Counter -->
                 <a-gltf-model id="bar" src="src/objects/bar/scene.gltf" scale="4.5 4.5 2.8" position="-2.5 2.5 11.3"></a-gltf-model>
                 <a-gltf-model id="stool-1" src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-4 1 8.5"></a-gltf-model>
                 <a-gltf-model id="stool-2" src="src/objects/stool/scene.gltf" scale="0.03 0.03 0.03" position="-2 1 8.5"></a-gltf-model>
