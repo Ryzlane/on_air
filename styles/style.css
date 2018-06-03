@@ -1,3 +1,16 @@
-body {
-    background: rgb(110, 16, 16);
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+.loader p {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 24px;
 }
