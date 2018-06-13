@@ -22,15 +22,26 @@
                 <img id="wall-right" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
                 <img id="wall-left" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
                 <img id="wall-back" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
-                {# <img id="rockabilly-poster" src="src/img/rockabilly-poster.png" alt="poster">
-                <audio id="audio" src="src/musics/choice1-blues.mp3"></audio> #}
+                <img id="rockabilly-poster" src="src/img/rockabilly-poster.png" alt="poster">
+                <img id="glamrock-poster" src="src/img/glamrock-poster.png" alt="poster">
+                <img id="rocknroll-poster" src="src/img/rocknroll-poster.png" alt="poster">
+                <audio id="audio-rockabilly" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-blues.mp3?1528909904934"></audio>
+                <audio id="audio-glamrock" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-garage.mp3?1528909885047"></audio>
+                <audio id="audio-rocknroll" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-rocknroll.mp3?1528909887799"></audio>
             </a-assets>
+
+
+            <a-entity position="-1 2.5 0" text="width: 2; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+                </a-entity>
             
                 <!-- SCENE-->
                 <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
                 <a-gltf-model id="music-band" src="src/objects/music-band/scene.gltf" position="-4.372 0.5 -2.398" rotation="0 45 0" scale="0.15 0.15 0.15" gltf-model="src/objects/music-band/scene.gltf"></a-gltf-model>            
                 <!-- Posters -->
-                <a-plane id="poster-face" handle-events sound="src:#audio; on: click" geometry="height: 2; width: 3;" material="src:#rockabilly-poster" position="0 1.83 -4.017" scale="0.375 0.732 1"></a-plane>
+                <a-plane id="poster-1" handle-events sound="src:#audio-rockabilly; on: click" geometry="height: 2; width: 3;" material="src:#rockabilly-poster" position="0 1.83 -4.017" scale="0.375 0.732 1"></a-plane>
+                <a-plane id="poster-2" handle-events sound="src:#audio-glamrock; on: click" geometry="height: 2; width: 3;" material="src:#glamrock-poster" position="3 1.83 -4.017" scale="0.375 0.732 1"></a-plane>
+                <a-plane id="poster-3" handle-events sound="src:#audio-rocknroll; on: click" geometry="height: 2; width: 3;" material="src:#rocknroll-poster" position="6 1.83 -4.017" scale="0.375 0.732 1"></a-plane>
+
                 <!-- BAR -->
                 <!-- Tables -->
                 <a-gltf-model id="table-1" src="src/objects/table/scene.gltf" position="-2.993 0.53 4.5"></a-gltf-model>                
@@ -39,7 +50,7 @@
                 <a-gltf-model id="table-2" src="src/objects/table/scene.gltf" position="1.5 0.53 4.5"></a-gltf-model>                            
                 <a-gltf-model id="table-2-stool-1" src="src/objects/table-stool/scene.gltf" position="0.425 0.285 5.574" scale="0.35 0.35 0.35"></a-gltf-model> 
                 <a-gltf-model id="table-2-stool-2" src="src/objects/table-stool/scene.gltf" position="2.565 0.285 5.588" scale="0.35 0.35 0.35"></a-gltf-model>
-                <!-- Counter -->             
+                <!-- Counter -->
                 <a-gltf-model id="bar" src="src/objects/bar/scene.gltf" scale="4.5 4.5 2.8" position="-2.5 2.5 11.3"></a-gltf-model>
                 <a-gltf-model id="shelf" src="src/objects/shelf/scene.gltf" position="-2.5 -0.062 11.517" scale="0.008 0.008 0.008" gltf-model="src/objects/shelf/scene.gltf"></a-gltf-model>
                 <a-gltf-model id="beer-bottle-1" src="src/objects/shelf/scene.gltf" position="-1.369 2.552 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
@@ -52,12 +63,13 @@
                 <a-gltf-model id="human" src="src/objects/wow-human/scene.gltf" scale="0.052 0.052 0.052"></a-gltf-model>
 
             <!-- WALLS -->
-            <a-plane geometry="height: 14; width: 14" position="0 5 2.889" rotation="90 0 0" material="src:#wall-ceiling"></a-plane>
+            <a-plane geometry="height: 16; width: 14" position="0 5 3.823" rotation="90 0 0" material="src:#wall-ceiling"></a-plane>
             <a-plane geometry="height: 5; width: 14" position="0 2.5 -4.1" material="src:#wall-face"></a-plane>
             <a-plane geometry="height: 5; width: 14" position="0 2.5 11.8" rotation="180 0 0" material="src:#wall-back"></a-plane>
             <a-plane geometry="height: 5; width: 16" position="7 2.5 3.888" rotation="0 -90 0" material="src:#wall-right"></a-plane>
             <a-plane geometry="height: 5; width: 16" position="-7 2.5 3.888" rotation="0 90 0" material="src:#wall-left"></a-plane>
             <a-plane id="ground" rotation="-90 0 0"  position="0 0 3.923" geometry="height: 16; width: 14" material="src:#wall-ground"></a-plane>
+            
             <a-camera>
                 <a-cursor>
                     <a-animation begin="click" easing="ease-in" attribute="scale"
