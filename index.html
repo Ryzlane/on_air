@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Musical experience</title>
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="scripts/choices.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/components.js"></script>
+
 </head>
 <body>
         <div class="loader">
@@ -25,13 +28,15 @@
                 <img id="wall-back" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
 
                 <!-- Posters -->
-                <img id="rockabilly-poster" src="src/img/rockabilly-poster.png" alt="poster">
-                <img id="glamrock-poster" src="src/img/glamrock-poster.png" alt="poster">
-                <img id="rocknroll-poster" src="src/img/rocknroll-poster.png" alt="poster">
-                <img id="psychedelic-poster" src="src/img/psychedelic-poster.png" alt="poster">
-                <img id="garage-poster" src="src/img/garage-poster.png" alt="poster">
-                <img id="hardrock-poster" src="src/img/hardrock-poster.png" alt="poster">
-                <img id="blues-poster" src="src/img/blues-poster.png" alt="poster">
+                <img id="rockabilly-poster" src="src/posters/rockabilly-poster.png" alt="poster">
+                <img id="glamrock-poster" src="src/posters/glamrock-poster.png" alt="poster">
+                <img id="rocknroll-poster" src="src/posters/rocknroll-poster.png" alt="poster">
+                <img id="psychedelic-poster" src="src/posters/psychedelic-poster.png" alt="poster">
+                <img id="garage-poster" src="src/posters/garage-poster.png" alt="poster">
+                <img id="hardrock-poster" src="src/posters/hardrock-poster.png" alt="poster">
+                <img id="blues-poster" src="src/posters/blues-poster.png" alt="poster">
+                <img id="punkrock-poster" src="src/posters/punkrock-poster.png" alt="poster">
+                <img id="alternativerock-poster" src="src/posters/alternativerock-poster.png" alt="poster">
 
                 <!-- Audios -->
                 <audio id="blues-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-blues.mp3?1528909904934" crossorigin="anonymous"></audio>
@@ -48,9 +53,9 @@
                 <a-gltf-model id="giita" src="src/objects/giita/scene.gltf" position="7.127 1.182 -0.598" scale="0.08 0.08 0.08" gltf-model="src/objects/giita/scene.gltf" rotation="12.548 -94.366 -33.06"></a-gltf-model>
                 <a-gltf-model id="sound-system" src="src/objects/sound-system/scene.gltf" position="5.677 0.492 -2.686" rotation="0 -45 0" scale="0.03 0.03 0.03" gltf-model="src/objects/sound-system/scene.gltf"></a-gltf-model>                                 
                 <!-- Posters -->
-                <a-plane passthrough id="poster-1" class="posters" sound="src:https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-blues.mp3?1528909904934; autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" material="src:#rockabilly-poster" position="-6.993 2.231 3.583" rotation="0 90 0"></a-plane>
-                <a-plane passthrough id="poster-2" class="posters" sound="src:https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-garage.mp3?1528909885047; autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5;width:1.8" material="src:#glamrock-poster" position="0.601 2.27 -4.017"></a-plane>
-                <a-plane passthrough id="poster-3" class="posters" sound="src:https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-rocknroll.mp3?1528909887799;maxDistance:5;volume:0.5; autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8;height:2.5" material="src:#rocknroll-poster" position="0.454 2.228 11.792" rotation="0 180 0"></a-plane>
+                <a-plane passthrough posters-hover id="poster-1" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" position="-6.993 2.231 3.583" rotation="0 90 0"></a-plane>
+                <a-plane passthrough posters-hover id="poster-2" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5; width:1.8" position="0.601 2.27 -4.017"></a-plane>
+                <a-plane passthrough posters-hover id="poster-3" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8; height:2.5" position="0.454 2.228 11.792" rotation="0 180 0"></a-plane>
 
                 <!-- BAR -->
                 <!-- Tables -->
@@ -83,20 +88,9 @@
             
             <a-camera>
                 <a-animation id="camera-animation" attribute="position" dur="2000" easing="linear" to="0 1.6 -10" begin="fallclick"></a-animation>
-                {# <a-cursor id="cursor">
-                    <a-animation begin="click" easing="ease-in" attribute="scale"
-                        fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
-                    <a-animation id="cursor-animation" begin="fusing-posters" attribute="material.color" fill="forward" to="red"></a-animation>
-                </a-cursor> #}
             </a-camera>
             <a-sky id="sky" color="#F5D1B0"></a-sky>
           </a-scene>
-          <script>
-                const scene = document.querySelector('a-scene');
-                const loader = document.querySelector('.loader');
-                scene.addEventListener('loaded', () => {
-                    loader.remove()
-                });                
-          </script>
+          <script src="scripts/main.js"></script>
       </body>
 </html>
