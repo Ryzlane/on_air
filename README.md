@@ -7,4 +7,3 @@ Have access to the 3D models to download here and put them into a new "objects" 
 
 - A-frame
 - Javacript vanilla
-- API Spotify
