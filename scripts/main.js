@@ -21,6 +21,12 @@ buttonStart.addEventListener('click', () => {
 
 let position = ""
 
+
+const posterChosen = () => {
+    
+}
+
+
 const changePosters = (choices, position) => {
     
     let actualChoices;
@@ -53,3 +59,4 @@ const changePosters = (choices, position) => {
         src: actualChoices.choice3.audioid
     })
 }
+

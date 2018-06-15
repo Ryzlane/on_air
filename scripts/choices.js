@@ -13,17 +13,17 @@ const choices = {
                         choice1: {
                             title: 'Glam rock',
                             imageid: '#glamrock-poster',
-                            audioid: '#'
+                            audioid: '#glamrock-audio'
                         },
                         choice2: {
                             title: 'Hard rock',
                             imageid: '#hardrock-poster',
-                            audioid: '#'
+                            audioid: '#hardrock-audio'
                         },
                         choice3: {
                             title: 'Punk rock',
                             imageid: '#punkrock-poster',
-                            audioid: '#'
+                            audioid: '#punkrock-audio'
                         }
                     }
                 },
@@ -35,12 +35,12 @@ const choices = {
                         choice1: {
                             title: 'Rockabilly',
                             imageid: '#rockabilly-poster',
-                            audioid: '#'
+                            audioid: '#rockabilly-audio'
                         },
                         choice2: {
                             title: `Rock'n'roll`,
                             imageid: '#rocknroll-poster',
-                            audioid: '#'
+                            audioid: '#rocknroll-audio'
                         }
                     }                 
                 }
@@ -52,36 +52,47 @@ const choices = {
             audioid: '#garage-audio',
             secondStep: {
                 choice1: {
-                    title: `Glam rock&co`,
-                    imageid: `#glamrock-poster`,
-                    audioid: '#',
+                    title: `Psychedelic rock&co`,
+                    imageid: `#psychedelic-poster`,
+                    audioid: '#psychedelic-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Psychedelic rock',
+                            imageid: `#psychedelic-poster`,
+                            audioid: '#psychedelic-audio',
                         },
                         choice2: {
                             title: 'Hard rock',
+                            imageid: `#hardrock-poster`,
+                            audioid: '#hardrock-audio',
+
                         },
                         choice3: {
-                            title: 'Glam rock'
+                            title: 'Glam rock',
+                            imageid: '#glamrock-poster',
+                            audioid: '#glamrock-audio'
                         }
                     }
                 },
                 choice2: {
-                    title: `Psychedelic rock&co`,
-                    imageid: `#psychedelic-poster`,
-                    audioid: '#',
+                    title: `Glam rock&co`,
+                    imageid: `#glamrock-poster`,
+                    audioid: '#glamrock-audio',
                     thirdStep: {
                         choice1: {
-                            title: 'Glam rock',
+                            title: 'Glamrock',
                             imageid: '#glamrock-poster',
-                            audioid: '#'
+                            audioid: '#glamrock-audio'
                         },
                         choice2: {
                             title: 'Punk rock',
+                            imageid: '#punkrock-poster',
+                            audioid: '#punkrock-audio'
                         },
                         choice3: {
-                            title: 'Rock alternatif'
+                            title: 'Alternative rock',
+                            imageid: '#alternativerock-poster',
+                            audioid: '#alternativerock-audio'
                         }
                     }
                 }
@@ -95,13 +106,17 @@ const choices = {
                 choice1: {
                     title: `Rockabilly&co`,
                     imageid: `#rockabilly-poster`,
-                    audioid: '#',
+                    audioid: '#rockabilly-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Rockabilly',
+                            imageid: `#rockabilly-poster`,
+                            audioid: '#rockabilly-audio'
                         },
                         choice2: {
                             title: `Rock'n'roll`,
+                            imageid: `#rocknroll-poster`,
+                            audioid: '#rocknroll-audio'
                         }
                     }              
                 },
@@ -112,10 +127,13 @@ const choices = {
                     thirdStep: {
                         choice1: {
                             title: 'Hard rock',
-                            imageid:'#hardrock-poster'
+                            imageid: `#hardrock-poster`,
+                            audioid: '#hardrock-audio'
                         },
                         choice2: {
-                            title: `Rock psychedelic`,
+                            title: `Psychedelic rock`,
+                            imageid: `#psychedelicrock-poster`,
+                            audioid: '#psychedelicrock-audio'
                         }
                     }   
                 }
