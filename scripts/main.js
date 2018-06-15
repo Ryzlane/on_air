@@ -1,9 +1,19 @@
-const scene = document.querySelector('a-scene');
-const loader = document.querySelector('.loader')
+const poster1 = document.querySelector('#poster-1');
+const poster2 = document.querySelector('#poster-2');
+const poster3 = document.querySelector('#poster-3');
 
-console.log(scene.hasLoaded);
+// poster1.setAttribute('material', {
+//     src: '#hardrock-poster'
+//   });
 
-scene.addEventListener('loaded', () => {
-    console.log(scene.hasLoaded)
-    loader.remove()
-});
+AFRAME.registerComponent("passthrough", {
+    init: function() {
+    let animCamera = document.querySelector("#camera-animation");
+
+      this.el.addEventListener("click", (e) => {
+        console.log(this.el)
+        animCamera.emit("fallclick")
+      })
+
+    }
+  })
