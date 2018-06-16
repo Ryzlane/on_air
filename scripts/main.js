@@ -69,9 +69,13 @@ const removePosters = (posters) => {
         })
     
         posters[j].setAttribute('sound', {
-            src: "noooo"
+            src: "nooo"
         })
     }
+}
+
+const endOfTheGame = () => {
+    console.log("It's the end of the game as we know it")
 }
 
 buttonStart.addEventListener('click', () => {
@@ -90,6 +94,8 @@ for(let i = 0; i < posters.length; i++) {
             actualChoices = actualChoices[posters[i].dataset.choice].secondStep
         } else if(step === 2) {
             actualChoices = actualChoices[posters[i].dataset.choice].thirdStep
+        } else if(step === 3) {
+            endOfTheGame()
         }
         return actualChoices;
     })
