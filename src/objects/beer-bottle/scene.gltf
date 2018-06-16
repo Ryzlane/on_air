@@ -1,0 +1,420 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 872,
+      "max": [
+        1.0240199565887451,
+        1.0240199565887451,
+        3.5870399475097656
+      ],
+      "min": [
+        -1.0240199565887451,
+        -1.0240199565887451,
+        -3.7505600452423096
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10464,
+      "componentType": 5126,
+      "count": 872,
+      "max": [
+        0.9807855486869812,
+        0.9807855486869812,
+        0.47824981808662415
+      ],
+      "min": [
+        -0.9807855486869812,
+        -0.9807855486869812,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1398,
+      "max": [
+        871
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 20928,
+      "componentType": 5126,
+      "count": 368,
+      "max": [
+        0.48447999358177185,
+        0.48447999358177185,
+        3.8131999969482422
+      ],
+      "min": [
+        -0.48447999358177185,
+        -0.48447999358177185,
+        3.5789899826049805
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 25344,
+      "componentType": 5126,
+      "count": 368,
+      "max": [
+        0.949543297290802,
+        0.949543297290802,
+        1
+      ],
+      "min": [
+        -0.949543297290802,
+        -0.949543297290802,
+        -0.99319583177566528
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 5592,
+      "componentType": 5125,
+      "count": 522,
+      "max": [
+        367
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 29760,
+      "componentType": 5126,
+      "count": 80,
+      "max": [
+        1,
+        0.38267999887466431,
+        -0.38001000881195068
+      ],
+      "min": [
+        -1,
+        -1,
+        -2.7857100963592529
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 30720,
+      "componentType": 5126,
+      "count": 80,
+      "max": [
+        0.9807855486869812,
+        0.19508911669254303,
+        0
+      ],
+      "min": [
+        -0.9807855486869812,
+        -0.9807855486869812,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 7680,
+      "componentType": 5125,
+      "count": 132,
+      "max": [
+        79
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 31680,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        1,
+        -0,
+        -0.66355997323989868
+      ],
+      "min": [
+        -1,
+        -1,
+        -2.5023300647735596
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 32064,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.9807855486869812,
+        -0.19508911669254303,
+        0
+      ],
+      "min": [
+        -0.9807855486869812,
+        -0.9807855486869812,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 8208,
+      "componentType": 5125,
+      "count": 48,
+      "max": [
+        31
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Jiří Kuba (https://sketchfab.com/kuba.jirka)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/04b870f441e848cb8537f931749125dd",
+      "title": "Beer bottle"
+    },
+    "generator": "Sketchfab-3.18.6",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 8400,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32448,
+      "byteOffset": 8400,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 40848,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "BeerGlassMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.082282722000000003,
+          0.25015830989999999,
+          0.0512694754,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "BeerCapMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.86888498069999998,
+          0.86888498069999998,
+          0.86888498069999998,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "BeerLabelMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.84687340259999999,
+          0.57112503049999996,
+          0.4232676923,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "BeerLabelInsideMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.32314324379999998,
+          0.064803287400000006,
+          0.086500473300000005,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "BeerBottle_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BeerBottle_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BeerBottle_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BeerBottle_3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9
+          },
+          "indices": 11,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "name": "BeerBottle"
+    },
+    {
+      "mesh": 0,
+      "name": "BeerBottle_0"
+    },
+    {
+      "mesh": 1,
+      "name": "BeerBottle_1"
+    },
+    {
+      "mesh": 2,
+      "name": "BeerBottle_2"
+    },
+    {
+      "mesh": 3,
+      "name": "BeerBottle_3"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
