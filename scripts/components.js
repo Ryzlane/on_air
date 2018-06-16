@@ -17,7 +17,7 @@ AFRAME.registerComponent("passthrough", {
     init: function () {
       var el = this.el;  // <a-box>
       el.addEventListener('mouseenter', function () {
-        el.setAttribute('color', '#24CAFF');  
+        el.setAttribute('color', '#E30613');  
       });
       el.addEventListener('mouseleave', function () {
         el.setAttribute('color', '');  
