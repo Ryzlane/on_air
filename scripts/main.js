@@ -1,13 +1,14 @@
-const scene = document.querySelector('a-scene')
-const loader = document.querySelector('.loader')
-const loading = document.querySelector('.loading')
-const loaderText = document.querySelector('.loader .container-text')
+let scene = document.querySelector('a-scene')
+let audioanalyser = document.querySelector('#analyser')
+let loader = document.querySelector('.loader')
+let loading = document.querySelector('.loading')
+let loaderText = document.querySelector('.loader .container-text')
 let poster1 = document.querySelector('#poster-1')
 let poster2 = document.querySelector('#poster-2')
 let poster3 = document.querySelector('#poster-3')
 let posters = document.querySelectorAll('.posters')
-const buttonStart = document.querySelector('.panel button')
-const nextStep = document.querySelector('#next-step')
+let buttonStart = document.querySelector('.panel button')
+let nextStep = document.querySelector('#next-step')
 
 let step = 0
 let actualChoices = ""
@@ -87,8 +88,14 @@ buttonStart.addEventListener('click', () => {
 
 for(let i = 0; i < posters.length; i++) {
     posters[i].addEventListener('click', (e) => {
+
+        audioanalyser.setAttribute('audioanalyser', {
+            src:'#final-psychedelic-audio',
+            // posters[i].object3D.el.components.sound.attrValue.src
+        })
+
         removePosters(posters)
-        
+
         if(step === 1) {
 
             actualChoices = actualChoices[posters[i].dataset.choice].secondStep

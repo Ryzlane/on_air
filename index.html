@@ -94,6 +94,28 @@
 
 
             </a-assets>
+
+            <a-entity id="analyser"
+            audioanalyser="src: #final-punkrock-audio"
+            rotation="90 0 0"
+            position="0 30 0"
+          ></a-entity>
+        
+    
+          <!-- Spectrum visualization. -->
+          <a-entity
+            audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06"
+            entity-generator="mixin: bar; num: 128"
+            layout="type: circle; radius: 10"
+            rotation="0 180 0"
+          ></a-entity>
+            
+                        <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
+                                <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
+                        </a-box>
+                        <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
+                                <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
+                        </a-entity>
             
                 <!-- SCENE-->
                 <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
@@ -139,30 +161,6 @@
             </a-camera>
             
             <a-sky id="sky" color="#c0dae9"></a-sky>
-
-
-
-
-            <!-- AUDIO ANALYSER -->
-              <a-entity id="analyser"
-            audioanalyser="src: #song"
-            rotation="90 0 0"
-            position="0 30 0"></a-entity>
-        
-          <!-- Spectrum visualization. -->
-          <a-entity
-            audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06"
-            entity-generator="mixin: bar; num: 128"
-            layout="type: circle; radius: 16"
-            position="0 0 8.5"
-            rotation="0 180 0"></a-entity>
-
-            <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
-                    <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
-            </a-box>
-            <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
-                    <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
-            </a-entity>
         </a-scene>
           <script src="scripts/main.js"></script>
       </body>

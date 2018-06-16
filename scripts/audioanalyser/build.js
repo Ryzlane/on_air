@@ -195,7 +195,7 @@
           if (childEl.hasLoaded) { return _getPositions(); }
           childEl.addEventListener('loaded', _getPositions);
           function _getPositions () {
-            var position = childEl.getComputedAttribute('position');
+            var position = childEl.getAttribute('position');
             self.initialPositions.push([position.x, position.y, position.z]);
           }
         });
@@ -218,7 +218,7 @@
         var numChildren = children.length;
         var positionFn;
         var positions;
-        var startPosition = el.getComputedAttribute('position');
+        var startPosition = el.getAttribute('position');
     
         // Calculate different positions based on layout shape.
         switch (data.type) {
