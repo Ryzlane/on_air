@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Musical experience</title>
+    <title>On air</title>
     <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
+    <script src="scripts/audioanalyser/build.js"></script>
+    <script src="scripts/audioanalyser/ring-on-beat.js"></script>
+    <script src="scripts/audioanalyser/scale-y-color.js"></script>
+    <script src="scripts/audioanalyser/audioanalyser-levels-scale.js"></script>
+    <script src="scripts/audioanalyser/audioanalyser-volume-bind.js"></script>
+    <script src="scripts/audioanalyser/audioanalyser-volume-scale.js"></script>
+    <script src="scripts/audioanalyser/audioanalyser-waveform.js"></script>
     <script src="scripts/choices.js"></script>
     <script src="scripts/components.js"></script>
 
 </head>
 <body>
-        <div class="loader">
-            <p>The page is loading, please wait...</p>
+    <div class="loader">
+        <div class="loading">
+            <div class="lds-facebook"><div></div><div></div><div></div></div>
+            <p>The experience is loading. Please wait.</p>
+
         </div>
+        <div class="container-text">
+            <h1 class="tit">ON AIR</h1>
+            <div class="instruction">
+            <h3>Instruction</h3>
+                <p> Une scène va s'afficher devant toi, parcours cette pièce, ecoute les musiques et choisi celle que tu aimes le plus. Utilise les flèches du clavier pour te déplacer et controle la caméra avec la souris.</p>
+            </div>
+            <div class="panel pink">
+                <button>START THE EXPERIENCE</button>
+            </div>
+        </div>
+    </div>
         <a-scene cursor="rayOrigin:mouse">
             <a-assets>
                 <img id="wall-ceiling" src="src/img/ceiling.jpg" alt="ceiling" crossorigin="anonymous" />
@@ -39,13 +62,11 @@
                 <img id="alternativerock-poster" src="src/posters/alternativerock-poster.png" alt="poster">
 
                 <!-- Audios -->
+                <a-mixin id="bar" geometry="primitive: box" material="color: rgb(10, 20, 50); shader: flat" scale-y-color="from: 10 20 50; to: 210, 220, 250; maxScale: 15"></a-mixin>
                 <audio id="blues-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-blues.mp3?1528909904934" crossorigin="anonymous"></audio>
                 <audio id="garage-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-garage.mp3?1528909885047" crossorigin="anonymous"></audio>
                 <audio id="rocknroll-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-rocknroll.mp3?1528909887799" crossorigin="anonymous"></audio>
             </a-assets>
-
-
-            <a-entity position="-1 2.5 0" text="width: 2; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"></a-entity>
             
                 <!-- SCENE-->
                 <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
@@ -53,9 +74,9 @@
                 <a-gltf-model id="giita" src="src/objects/giita/scene.gltf" position="7.127 1.182 -0.598" scale="0.08 0.08 0.08" gltf-model="src/objects/giita/scene.gltf" rotation="12.548 -94.366 -33.06"></a-gltf-model>
                 <a-gltf-model id="sound-system" src="src/objects/sound-system/scene.gltf" position="5.677 0.492 -2.686" rotation="0 -45 0" scale="0.03 0.03 0.03" gltf-model="src/objects/sound-system/scene.gltf"></a-gltf-model>                                 
                 <!-- Posters -->
-                <a-plane passthrough posters-hover id="poster-1" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" position="-6.993 2.231 3.583" rotation="0 90 0"></a-plane>
-                <a-plane passthrough posters-hover id="poster-2" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5; width:1.8" position="0.601 2.27 -4.017"></a-plane>
-                <a-plane passthrough posters-hover id="poster-3" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8; height:2.5" position="0.454 2.228 11.792" rotation="0 180 0"></a-plane>
+                <a-plane passthrough posters-hover data-choice="choice1" id="poster-1" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" position="-6.993 2.231 3.583" rotation="0 90 0"></a-plane>
+                <a-plane passthrough posters-hover data-choice="choice2" id="poster-2" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5; width:1.8" position="0.601 2.27 -4.017"></a-plane>
+                <a-plane passthrough posters-hover data-choice="choice3" id="poster-3" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8; height:2.5" position="0.454 2.228 11.792" rotation="0 180 0"></a-plane>
 
                 <!-- BAR -->
                 <!-- Tables -->
@@ -85,12 +106,39 @@
             <a-plane geometry="height: 5; width: 16" position="7 2.5 3.888" rotation="0 -90 0" material="src:#wall-right"></a-plane>
             <a-plane geometry="height: 5; width: 16" position="-7 2.5 3.888" rotation="0 90 0" material="src:#wall-left"></a-plane>
             <a-plane id="ground" rotation="-90 0 0"  position="0 0 3.923" geometry="height: 16; width: 14" material="src:#wall-ground"></a-plane>
+            <a-plane id="wall-out" geometry="height: 5; width: 14" rotation="0 180 0" position="0 2.5 -4.1" material="color:#c0dae9"></a-plane>
             
-            <a-camera>
-                <a-animation id="camera-animation" attribute="position" dur="2000" easing="linear" to="0 1.6 -10" begin="fallclick"></a-animation>
+            <a-camera rotation="0 180 0">
+                <a-animation id="camera-out" attribute="position" dur="2000" easing="linear" to="0 1.6 -10" begin="fallclick"></a-animation>
+                <a-animation id="camera-in" attribute="position" dur="2000" easing="linear" to="0 1.6 0" begin="go-back"></a-animation>
             </a-camera>
-            <a-sky id="sky" color="#F5D1B0"></a-sky>
-          </a-scene>
+            
+            <a-sky id="sky" color="#c0dae9"></a-sky>
+
+
+
+
+            <!-- AUDIO ANALYSER -->
+              <a-entity id="analyser"
+            audioanalyser="src: #song"
+            rotation="90 0 0"
+            position="0 30 0"></a-entity>
+        
+          <!-- Spectrum visualization. -->
+          <a-entity
+            audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06"
+            entity-generator="mixin: bar; num: 128"
+            layout="type: circle; radius: 16"
+            position="0 0 8.5"
+            rotation="0 180 0"></a-entity>
+
+            <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
+                    <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
+            </a-box>
+            <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
+                    <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
+            </a-entity>
+        </a-scene>
           <script src="scripts/main.js"></script>
       </body>
 </html>

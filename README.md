@@ -5,5 +5,5 @@ Have access to the 3D models to download here and put them into a new "objects" 
 
 # Technos used
 
-- A-frame
+- A-frame (with audioanalyser framework)
 - Javacript vanilla

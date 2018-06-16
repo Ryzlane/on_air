@@ -1,12 +1,13 @@
-let animCamera = document.querySelector("#camera-animation");
-
 AFRAME.registerComponent("passthrough", {
     init: function() {
-    let animCamera = document.querySelector("#camera-animation");
+    let animCameraOut = document.querySelector("#camera-out");
+    let animButton = document.querySelector("#button-animation");
+    let animText = document.querySelector("#text-animation");
 
       this.el.addEventListener("click", (e) => {
-        console.log(this.el)
-        animCamera.emit("fallclick")
+        animCameraOut.emit("fallclick")
+        animButton.emit("mounting")
+        animText.emit("mounting-text")
       })
 
     }
@@ -23,3 +24,14 @@ AFRAME.registerComponent("passthrough", {
       });
     }
 });
+
+AFRAME.registerComponent('go-back-in-the-game', {
+  init: function() {
+    let animCameraIn = document.querySelector("#camera-in");
+
+      this.el.addEventListener("click", (e) => {
+        animCameraIn.emit("go-back")
+      })
+
+    }
+})

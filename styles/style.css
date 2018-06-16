@@ -1,28 +1,186 @@
-.loader {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+.pass-next-step {
+    display: none;
     z-index: 1;
-    background-color: black;
+    color: white;
+    background: #E30613;
+    opacity: 0.5;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    height: 45px;
+    width: 300px;
+    border: none;
 }
 
-.loader p {
+
+.loader {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#000;
     color: white;
+}
+
+.loading {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    font-size: 24px;
+    font-family: comfortaa;
 }
 
-.loader button {
-    position: absolute;
-    top: 65%;
+.lds-facebook {
+    display: inline-block;
     left: 50%;
     transform: translateX(-50%);
-    height: 30px;
-    width: 75px;
-    color: white;
-    background: #E30613;
-    border: none;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+
+.container-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
+
+  /* Pour le start */
+
+h1, h3 {
+    text-align:center;
+    font-family:comfortaa;
+    font-weight:900;
+    font-size:30px;
+    color: white;
+    text-shadow:0em 0.05em 0 rgba(0,0,0,0.35);
+}
+
+img {
+    position: relative;
+    width: 200px;
+    height: auto;
+}
+
+.txt {
+    display: inline;
+}
+
+/* Pour le start */
+.slogan {
+    text-align: center;
+    font-size: 25px;
+}
+
+.instruction {
+    width: 400px;
+    height: 150px;
+    text-align:center;
+    position:relative;
+    margin:auto;
+}
+
+button 
+{
+    color:white;
+    background:transparent;
+    border-width:2px;
+    border-style: solid;
+    border-color:white;
+    position:relative;
+    margin:1em;
+    display:inline-block;
+    padding:0.5em 1em;
+    transition:all 0.3s ease-in-out;
+    text-align:center;
+    /* font-family:comfortaa; */
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.pink button:hover 
+{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-color:white;
+}
+
+button:before, button:after 
+{
+    content:'';
+    display:block;
+    position:absolute;
+    box-sizing:border-box;
+    border-style:solid;
+    width:1em;height:1em;
+    transition:all 0.3s ease-in-out
+}
+
+button:before 
+{
+    top:-6px;
+    left:-6px;
+    border-width:2px 0 0 2px;
+    z-index:5;
+    border-color:white;
+
+}
+
+button:after 
+{
+    bottom:-6px;
+    right:-6px;
+    border-width:0 2px 2px 0;
+    border-color:white;
+
+}
+
+.pink button:hover:before, .pink button:hover:after 
+{
+    width:calc(100% + 12px);
+    height:calc(100% + 12px);
+    border-color:white;
+}
+
+.panel 
+{
+    max-width:960px;
+    text-align:center;
+    position:relative;
+    margin:auto;
+}
+
