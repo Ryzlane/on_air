@@ -54,5 +54,4 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 
 - Edouard Haberer : https://github.com/edhbr
 
- - A special thank to POUPA, baby perfect 3D plastic.
-![My image](ryzlane.github.com/on_air/src/img/poupa.png)
+ - A special thank to POUPA, baby perfect 3D plastic. https://github.com/Ryzlane/on_air/blob/master/src/img/poupa.png
