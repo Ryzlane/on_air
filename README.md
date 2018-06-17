@@ -4,7 +4,7 @@ Checkout the website here:
 
 ##  1. Intro
 
-This is school project based on rock music, made at @ecolehetic.
+This is school project based on rock music, made at [@ecolehetic](https://github.com/ecolehetic).
 
 You're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
 
