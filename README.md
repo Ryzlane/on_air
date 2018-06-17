@@ -1,6 +1,5 @@
 # ON AIR 
-Checkout the website here:
-- https://ryzlane.github.io/on_air/
+Checkout the website [here](https://ryzlane.github.io/on_air/)!
 
 ##  1. Intro
 
