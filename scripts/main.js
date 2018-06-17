@@ -9,6 +9,9 @@ let poster3 = document.querySelector('#poster-3')
 let posters = document.querySelectorAll('.posters')
 let buttonStart = document.querySelector('.panel button')
 let nextStep = document.querySelector('#next-step')
+let song = document.querySelector('#song')
+
+
 
 let step = 0
 let actualChoices = ""
@@ -88,11 +91,9 @@ buttonStart.addEventListener('click', () => {
 
 for(let i = 0; i < posters.length; i++) {
     posters[i].addEventListener('click', (e) => {
+        let lookSongId = posters[i].object3D.el.components.sound.attrValue.src
+        let songAsset = document.querySelector(lookSongId).src
 
-        audioanalyser.setAttribute('audioanalyser', {
-            src:'#final-psychedelic-audio',
-            // posters[i].object3D.el.components.sound.attrValue.src
-        })
 
         removePosters(posters)
 
