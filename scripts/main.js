@@ -19,6 +19,7 @@ let actualChoices = ""
 nextStep.addEventListener('click', () => {
     console.log("Omg only click click click")
     addPosters(choices, step)
+    song.src = "nosong"
     ++step
     console.log(step)
 })
@@ -60,7 +61,9 @@ const addPosters = (choices, step) => {
         poster3.setAttribute('sound', {
             src: actualChoices.choice3.audioid
         }) } else {
-            console.log("No third choice here, dear")
+        poster3.setAttribute('position', {
+            z: '12'
+        })
     }
 
     return actualChoices;
@@ -91,8 +94,10 @@ buttonStart.addEventListener('click', () => {
 
 for(let i = 0; i < posters.length; i++) {
     posters[i].addEventListener('click', (e) => {
+        console.log(posters[i])
         let lookSongId = posters[i].object3D.el.components.sound.attrValue.src
         let songAsset = document.querySelector(lookSongId).src
+        song.src = songAsset
 
 
         removePosters(posters)

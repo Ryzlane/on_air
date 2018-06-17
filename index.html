@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,6 +9,7 @@
     <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
@@ -19,36 +20,41 @@
     <script src="scripts/audioanalyser/audioanalyser-volume-bind.js"></script>
     <script src="scripts/audioanalyser/audioanalyser-volume-scale.js"></script>
     <script src="scripts/audioanalyser/audioanalyser-waveform.js"></script>
+    <!-- Personal scripts needing to be loaded before the scene -->
     <script src="scripts/choices.js"></script>
     <script src="scripts/components.js"></script>
+    </head>
+    <body>
 
-</head>
-<body>
-    <div class="loader">
-        <div class="loading">
-            <div class="lds-facebook"><div></div><div></div><div></div></div>
-            <p>The experience is loading. Please wait.</p>
+        <!-- INTRODUCTION -->
+        <div class="loader">
+            <!-- Loading -->
+            <div class="loading">
+                <div class="lds-facebook"><div></div><div></div><div></div></div>
+                <p>The experience is loading. Please wait.</p>
+            </div>
+            <!-- Instructions -->
+            <div class="container-text">
+                <h1 class="tit">ON AIR</h1>
+                <div class="instruction">
+                <h3>Instruction</h3>
+                    <p>Hello rocker, you're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
+                        <br /><br />
+                        Ready for the adventure? You can move through the room with the arrows or WASD control (and the camera with the mouse). Don't be afraid, come close to the posters you see and chose the music you like the most.
+                    </p>
+                </div>
+                <div class="panel pink">
+                    <button>START THE EXPERIENCE</button>
+                </div>
+            </div>
+        </div>
 
-        </div>
-        <div class="container-text">
-            <h1 class="tit">ON AIR</h1>
-            <div class="instruction">
-            <h3>Instruction</h3>
-                <p>Hello rocker, you're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
-                    <br /><br />
-                    Ready for the adventure? You can move through the room with the arrows or WASD control (and the camera with the mouse). Don't be afraid, come close to the posters you see and chose the music you like the most.
-                </p>
-            </div>
-            <div class="panel pink">
-                <button>START THE EXPERIENCE</button>
-            </div>
-        </div>
-    </div>
+
         <a-scene cursor="rayOrigin:mouse">
-            <!-- Loading of the assets used in the scene -->
-            <a-assets>
-                <a-mixin id="bar" geometry="primitive: box" material="color: rgb(10, 20, 50); shader: flat" scale-y-color="from: 10 20 50; to: 210, 220, 250; maxScale: 15"></a-mixin>
 
+            <!-- LOADING OF THE ASSETS USED IN THE SCENE -->
+            <a-assets>
+                <!-- Loading walls texture -->
                 <img id="wall-ceiling" src="src/img/ceiling.jpg" alt="ceiling" crossorigin="anonymous" />
                 <img id="wall-ground" src="src/img/ground.png" alt="ground" crossorigin="anonymous" />
                 <img id="scene-texture" src="src/img/ceiling.jpg" alt="scene" crossorigin="anonymous" />
@@ -57,7 +63,7 @@
                 <img id="wall-left" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
                 <img id="wall-back" src="src/img/walls.png" alt="wall" crossorigin="anonymous" />
 
-                <!-- Posters -->
+                <!-- Loading posters img -->
                 <img id="rockabilly-poster" src="src/posters/rockabilly-poster.png" alt="poster">
                 <img id="glamrock-poster" src="src/posters/glamrock-poster.png" alt="poster">
                 <img id="rocknroll-poster" src="src/posters/rocknroll-poster.png" alt="poster">
@@ -68,8 +74,7 @@
                 <img id="punkrock-poster" src="src/posters/punkrock-poster.png" alt="poster">
                 <img id="alternativerock-poster" src="src/posters/alternativerock-poster.png" alt="poster">
 
-                <!-- Audios -->
-
+                <!-- Loading posters audios -->
                 <audio id="choice1-rocknroll-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-rocknroll.mp3?1528909887799" crossorigin="anonymous"></audio>
                 <audio id="choice1.1-glamrock-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2F1-1.mp3?1529183724084" crossorigin="anonymous"></audio>
                 <audio id="choice1.2-rockabilly-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2F1-2.mp3?1529183727775" crossorigin="anonymous"></audio>
@@ -79,7 +84,6 @@
                 <audio id="choice3-blues-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-blues.mp3?1528909904934" crossorigin="anonymous"></audio>
                 <audio id="choice3.1-rockabilly-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2F3-1.mp3?1529187271772" crossorigin="anonymous"></audio>
                 <audio id="choice3.2-psychedelic-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2F3.2.mp3?1529187285265" crossorigin="anonymous"></audio>
-
                 <audio id="final-rocknroll-audio" src="https://cdn.glitch.com/9360fab7-56ab-408a-909a-664f29892c47%2Fchoice1-rocknroll.mp3?1528909887799" crossorigin="anonymous"></audio>
                 <audio id="final-rockabilly-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2Ffinal-rockabilly.mp3?1529188290725" crossorigin="anonymous"></audio>
                 <audio id="final-glamrock-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2Ffinal-glamrock.mp3?1529188437368" crossorigin="anonymous"></audio>
@@ -88,61 +92,28 @@
                 <audio id="final-punkrock-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2Ffinal-punkrock.mp3?1529188388856" crossorigin="anonymous"></audio>
                 <audio id="final-alternativerock-audio" src="https://cdn.glitch.com/a488b68d-a1f6-4ecf-ac67-1cf0d96b8e16%2Ffinal-alternativerock.mp3?1529188509623" crossorigin="anonymous"></audio>
 
+                <!-- Loading audioanalyser assets -->
+                <a-mixin id="bar" geometry="primitive: box" material="color: rgb(10, 20, 50); shader: flat" scale-y-color="from: 10 20 50; to: 210, 220, 250; maxScale: 15"></a-mixin>
                 <audio id="song" src="" autoplay loop crossorigin="anonymous"></audio>
-
-
             </a-assets>
 
-            <a-entity id="analyser"
-            audioanalyser="src: #song"
-            rotation="90 0 0"
-            position="0 30 0"
-          ></a-entity>
-        
-    
-          <!-- Spectrum visualization. -->
-          <a-entity
-            audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06"
-            entity-generator="mixin: bar; num: 128"
-            layout="type: circle; radius: 16"
-            rotation="0 0 0"
-          ></a-entity>
+
+            <!-- AUDIOANALYSER -->
+            <a-entity id="analyser" audioanalyser="src: #song" rotation="90 0 0" position="0 30 0"></a-entity>
+            <!-- Spectrum visualization. -->
+            <a-entity audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06" entity-generator="mixin: bar; num: 128" layout="type: circle; radius: 16" rotation="0 0 0"></a-entity>
+            <!-- Button to go back in the game -->
+            <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
+                 <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
+            </a-box>
+            <!-- Txt -->
+            <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
+                <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
+            </a-entity>
             
-                        <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
-                                <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
-                        </a-box>
-                        <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
-                                <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
-                        </a-entity>
-            
-                <!-- SCENE-->
-                <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
-                <a-gltf-model id="music-band" src="src/objects/music-band/scene.gltf" position="-4.372 0.5 -2.398" rotation="0 45 0" scale="0.15 0.15 0.15"></a-gltf-model>
-                <a-gltf-model id="giita" src="src/objects/giita/scene.gltf" position="7.127 1.182 -0.598" scale="0.08 0.08 0.08"rotation="12.548 -94.366 -33.06"></a-gltf-model>
-                <a-gltf-model id="sound-system" src="src/objects/sound-system/scene.gltf" position="5.677 0.492 -2.686" rotation="0 -45 0" scale="0.03 0.03 0.03"></a-gltf-model>                                 
-
-                <a-plane passthrough posters-hover data-choice="choice1" id="poster-1" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" position="-6.993 2.231 3.583" rotation="0 90 0" material="color:#ffffff00"></a-plane>
-                <a-plane passthrough posters-hover data-choice="choice2" id="poster-2" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5; width:1.8" position="0.601 2.27 -4.017" material="color:#ffffff00"></a-plane>
-                <a-plane passthrough posters-hover data-choice="choice3" id="poster-3" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8; height:2.5" position="0.454 2.228 11.792" rotation="0 180 0" material="color:#ffffff00"></a-plane>
-
-                <a-gltf-model id="keg-1" src="src/objects/keg/scene.gltf" position="5.708 1.039 4.771" scale="1.3 1.3 1.3" gltf-model="src/objects/keg/scene.gltf"></a-gltf-model>
-                <a-gltf-model id="keg-2" src="src/objects/keg/scene.gltf" position="5.708 1.039 8.109" scale="1.3 1.3 1.3" gltf-model="src/objects/keg/scene.gltf"></a-gltf-model>
-                <a-gltf-model id="table-1" src="src/objects/table/scene.gltf" position="-2.993 0.53 4.5"></a-gltf-model>                
-                <a-gltf-model id="table-1-stool-1" src="src/objects/table-stool/scene.gltf" position="-4.126 0.285 5.589" scale="0.35 0.35 0.35"></a-gltf-model>
-                <a-gltf-model id="table-1-stool-2" src="src/objects/table-stool/scene.gltf" position="-2.019 0.285 5.555" scale="0.35 0.35 0.35"></a-gltf-model>
-                <a-gltf-model id="table-2" src="src/objects/table/scene.gltf" position="1.5 0.53 4.5"></a-gltf-model>                            
-                <a-gltf-model id="table-2-stool-1" src="src/objects/table-stool/scene.gltf" position="0.425 0.285 5.574" scale="0.35 0.35 0.35"></a-gltf-model> 
-                <a-gltf-model id="table-2-stool-2" src="src/objects/table-stool/scene.gltf" position="2.565 0.285 5.588" scale="0.35 0.35 0.35"></a-gltf-model>
-
-                <a-gltf-model id="bar" src="src/objects/bar/scene.gltf" scale="4.5 4.5 2.8" position="-2.5 2.5 11.3"></a-gltf-model>
-                <a-gltf-model id="shelf" src="src/objects/shelf/scene.gltf" position="-2.5 -0.062 11.517" scale="0.008 0.008 0.008" gltf-model="src/objects/shelf/scene.gltf"></a-gltf-model>
-                <a-gltf-model id="beer-bottle-1" src="src/objects/shelf/scene.gltf" position="-1.369 2.552 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model id="beer-bottle-2" src="src/objects/shelf/scene.gltf" position="-3.122 1.752 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model id="beer-bottle-3" src="src/objects/shelf/scene.gltf" position="-2.014 0.979 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>                             
-
-                <a-gltf-model id="door" src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="4.221 0 11.739"></a-gltf-model>
-                <a-gltf-model id="piano" src="src/objects/piano/scene.gltf" position="-7.058 0 8.253" scale="1.5 1.5 1.5" gltf-model="src/objects/piano/scene.gltf"></a-gltf-model>
-
+            <!-- INSIDE THE BAR-->
+            <!-- Walls -->
+            <a-box id="music-scene" geometry="height: 0.5; width: 14; depth: 6" position="0 0.25 -1" material="src:#scene-texture"></a-box>
             <a-plane geometry="height: 16; width: 14" position="0 5 3.823" rotation="90 0 0" material="src:#wall-ceiling"></a-plane>
             <a-plane geometry="height: 5; width: 14" position="0 2.5 -4.1" material="src:#wall-face"></a-plane>
             <a-plane geometry="height: 5; width: 14" position="0 2.5 11.8" rotation="180 0 0" material="src:#wall-back"></a-plane>
@@ -150,14 +121,46 @@
             <a-plane geometry="height: 5; width: 16" position="-7 2.5 3.888" rotation="0 90 0" material="src:#wall-left"></a-plane>
             <a-plane id="ground" rotation="-90 0 0"  position="0 0 3.923" geometry="height: 16; width: 14" material="src:#wall-ground"></a-plane>
             <a-plane id="wall-out" geometry="height: 5; width: 14" rotation="0 180 0" position="0 2.5 -4.1" material="color:#c0dae9"></a-plane>
+
+            <!-- Posters -->                                
+            <a-plane passthrough posters-hover data-choice="choice1" id="poster-1" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5;" geometry="width:1.8;height:2.5" position="-6.993 2.231 3.583" rotation="0 90 0"></a-plane>
+            <a-plane passthrough posters-hover data-choice="choice2" id="poster-2" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="height:2.5; width:1.8" position="0.601 2.27 -4.017"></a-plane>
+            <a-plane passthrough posters-hover data-choice="choice3" id="poster-3" class="posters" sound="autoplay:true; refDistance:0.01; maxDistance:1.5; volume:1.5;" geometry="width:1.8; height:2.5" position="0.454 2.228 11.792" rotation="0 180 0"></a-plane>
+
+            <!-- On the bar scene -->
+            <a-gltf-model id="music-band" src="src/objects/music-band/scene.gltf" position="-4.372 0.5 -2.398" rotation="0 45 0" scale="0.15 0.15 0.15"></a-gltf-model>
+            <a-gltf-model id="giita" src="src/objects/giita/scene.gltf" position="7.127 1.182 -0.598" scale="0.08 0.08 0.08"rotation="12.548 -94.366 -33.06"></a-gltf-model>
+            <a-gltf-model id="sound-system" src="src/objects/sound-system/scene.gltf" position="5.677 0.492 -2.686" rotation="0 -45 0" scale="0.03 0.03 0.03"></a-gltf-model> 
+
+            <!-- Bar -->
+            <a-gltf-model id="keg-1" src="src/objects/keg/scene.gltf" position="5.708 1.039 4.771" scale="1.3 1.3 1.3" gltf-model="src/objects/keg/scene.gltf"></a-gltf-model>
+            <a-gltf-model id="keg-2" src="src/objects/keg/scene.gltf" position="5.708 1.039 8.109" scale="1.3 1.3 1.3" gltf-model="src/objects/keg/scene.gltf"></a-gltf-model>
+            <a-gltf-model id="table-1" src="src/objects/table/scene.gltf" position="-2.993 0.53 4.5"></a-gltf-model>                
+            <a-gltf-model id="table-1-stool-1" src="src/objects/table-stool/scene.gltf" position="-4.126 0.285 5.589" scale="0.35 0.35 0.35"></a-gltf-model>
+            <a-gltf-model id="table-1-stool-2" src="src/objects/table-stool/scene.gltf" position="-2.019 0.285 5.555" scale="0.35 0.35 0.35"></a-gltf-model>
+            <a-gltf-model id="table-2" src="src/objects/table/scene.gltf" position="1.5 0.53 4.5"></a-gltf-model>                            
+            <a-gltf-model id="table-2-stool-1" src="src/objects/table-stool/scene.gltf" position="0.425 0.285 5.574" scale="0.35 0.35 0.35"></a-gltf-model> 
+            <a-gltf-model id="table-2-stool-2" src="src/objects/table-stool/scene.gltf" position="2.565 0.285 5.588" scale="0.35 0.35 0.35"></a-gltf-model>
+            <a-gltf-model id="bar" src="src/objects/bar/scene.gltf" scale="4.5 4.5 2.8" position="-2.5 2.5 11.3"></a-gltf-model>
+            <a-gltf-model id="shelf" src="src/objects/shelf/scene.gltf" position="-2.5 -0.062 11.517" scale="0.008 0.008 0.008" gltf-model="src/objects/shelf/scene.gltf"></a-gltf-model>
+            <a-gltf-model id="beer-bottle-1" src="src/objects/shelf/scene.gltf" position="-1.369 2.552 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-gltf-model id="beer-bottle-2" src="src/objects/shelf/scene.gltf" position="-3.122 1.752 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-gltf-model id="beer-bottle-3" src="src/objects/shelf/scene.gltf" position="-2.014 0.979 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>                             
+            <a-gltf-model id="door" src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="4.221 0 11.739"></a-gltf-model>
+            <a-gltf-model id="piano" src="src/objects/piano/scene.gltf" position="-7.058 0 8.253" scale="1.5 1.5 1.5" gltf-model="src/objects/piano/scene.gltf"></a-gltf-model>
             
+
+            <!-- EXTERIOR ASSETS -->
             <a-camera rotation="0 180 0">
                 <a-animation id="camera-out" attribute="position" dur="2000" easing="linear" to="0 1.6 -10" begin="fallclick"></a-animation>
+                <a-animation id="camera-rotation" attribute="rotation" dur="2000" easing="linear" to="0 0 0" begin="rotate-camera"></a-animation>
                 <a-animation id="camera-in" attribute="position" dur="2000" easing="linear" to="0 1.6 0" begin="go-back"></a-animation>
             </a-camera>
 
             <a-sky id="sky" color="#c0dae9"></a-sky>
         </a-scene>
+
+        <!-- Personal script -->
           <script src="scripts/main.js"></script>
-      </body>
+    </body>
 </html>
