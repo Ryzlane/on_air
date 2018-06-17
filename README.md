@@ -37,6 +37,7 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 - Images  :  Posters, and textures of wall, ground and hight. 
 - Music.
 - 3D Elements/Onjects : Clara.io and Sketchfab.com
+- Playlist spotify.
 
 ### Technos used
 - A-frame (with audioanalyser framework)
@@ -46,3 +47,12 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 
 - Ryzlane ARSAC-GOTHIÈRE : Developper Front end
 - Camille FRIBOULET : Designer UX / UI - Graphiste 
+
+## 6. Thanks 
+
+Bruno Simon
+
+Edouard Haberer : 
+
+A special thank to POUPA, baby perfect plastic.
+![My image](username.github.com/on_air/src/img/poupa.png)
