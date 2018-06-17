@@ -1,3 +1,5 @@
+// Register some costum aframe components for the animations
+
 AFRAME.registerComponent("passthrough", {
     init: function() {
     let animCameraOut = document.querySelector("#camera-out")

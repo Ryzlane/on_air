@@ -1,3 +1,4 @@
+// HTML elements retrieved
 let scene = document.querySelector('a-scene')
 let camera = document.querySelector('a-camera')
 let audioanalyser = document.querySelector('#analyser')
@@ -12,24 +13,14 @@ let buttonStart = document.querySelector('.panel button')
 let nextStep = document.querySelector('#next-step')
 let song = document.querySelector('#song')
 
-
+// Variables
 let step = 0
 let actualChoices = ""
 
-nextStep.addEventListener('click', () => {
-    camera.setAttribute('wasd-controls', "")
-    addPosters(choices, step)
-    song.src = "nosong"
-    ++step
-})
 
-scene.addEventListener('loaded', () => {
-    setTimeout(function() { 
-        loading.style.display = "none"
-        loaderText.style.display = "inherit"
-    }, 5000)
-})
+/******** FUNCTIONS ********/
 
+// Add posters and their sounds at the beginning of the game and when the button next step is used
 const addPosters = (choices, step) => {
     
     if(step === 0) {
@@ -68,6 +59,8 @@ const addPosters = (choices, step) => {
     return actualChoices;
 }
 
+
+// Remove posters and musics attached to them when a poster is chosed
 const removePosters = (posters) => {
     for(let j = 0; j < posters.length; j++) {
         posters[j].setAttribute('material', {
@@ -80,6 +73,7 @@ const removePosters = (posters) => {
     }
 }
 
+// Display the board of the end of the steps
 const endOfTheGame = (poster, lastChoice) => {
     let board = document.querySelector('.container')
     let endLink = document.querySelector('.container .end-link')
@@ -88,7 +82,6 @@ const endOfTheGame = (poster, lastChoice) => {
     let title = document.querySelector('.container h1')
     
     console.log("It's the end of the game as we know it")
-    console.log(poster)
 
     endImg.src = poster
     endLink.href = poster
@@ -99,16 +92,36 @@ const endOfTheGame = (poster, lastChoice) => {
     board.classList.add('container-in')
 }
 
-buttonStart.addEventListener('click', () => {
-  loader.remove()
-  addPosters(choices, step)
-  ++step
-  console.log(step)
+
+/******** EVENTS LISTENERS ********/
+
+// Loader
+scene.addEventListener('loaded', () => {
+    setTimeout(function() { 
+        loading.style.display = "none"
+        loaderText.style.display = "inherit"
+    }, 5000)
 })
 
+// Start
+buttonStart.addEventListener('click', () => {
+    loader.remove()
+    addPosters(choices, step)
+    ++step
+  })
+  
+
+// Next step button
+nextStep.addEventListener('click', () => {
+    camera.setAttribute('wasd-controls', "")
+    addPosters(choices, step)
+    song.src = "nosong"
+    ++step
+})
+
+// All the actions triggered by click on the posters
 for(let i = 0; i < posters.length; i++) {
     posters[i].addEventListener('click', (e) => {
-        console.log(posters[i])
         let lookSongId = posters[i].object3D.el.components.sound.attrValue.src
         let songAsset = document.querySelector(lookSongId).src
         let lookPosterId = posters[i].object3D.el.components.material.attrValue.src
