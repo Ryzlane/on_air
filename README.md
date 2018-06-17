@@ -35,7 +35,7 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 ### Assets
 - Font :  Comfortaa. 
 - Images  :  Posters, and textures of wall, ground and hight. 
-- Music.
+- Musics.
 - 3D Elements/Onjects : Clara.io and Sketchfab.com
 - Playlist spotify.
 
@@ -55,4 +55,4 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 - Edouard Haberer : https://github.com/edhbr
 
  - A special thank to POUPA, baby perfect 3D plastic.
-![My image](username.github.com/on_air/src/img/poupa.png)
+![My image](ryzlane.github.com/on_air/src/img/poupa.png)
