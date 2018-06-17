@@ -1,4 +1,5 @@
 let scene = document.querySelector('a-scene')
+let camera = document.querySelector('a-camera')
 let audioanalyser = document.querySelector('#analyser')
 let loader = document.querySelector('.loader')
 let loading = document.querySelector('.loading')
@@ -17,11 +18,10 @@ let step = 0
 let actualChoices = ""
 
 nextStep.addEventListener('click', () => {
-    console.log("Omg only click click click")
+    camera.setAttribute('wasd-controls', "")
     addPosters(choices, step)
     song.src = "nosong"
     ++step
-    console.log(step)
 })
 
 scene.addEventListener('loaded', () => {
@@ -99,6 +99,7 @@ for(let i = 0; i < posters.length; i++) {
         let songAsset = document.querySelector(lookSongId).src
         song.src = songAsset
 
+        camera.removeAttribute('wasd-controls')
 
         removePosters(posters)
 

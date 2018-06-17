@@ -8,7 +8,7 @@ const choices = {
                 choice1: {
                     title: `Glam rock&co`,
                     imageid: `#glamrock-poster`,
-                    audioid: '#choice1.1-glamrock-audio',
+                    audioid: '#choice1-1-glamrock-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Glam rock',
@@ -33,7 +33,7 @@ const choices = {
                 choice2: {
                     title: `Rockabilly&co`,
                     imageid: `#rockabilly-poster`,
-                    audioid: '#choice1.2-rockabilly-audio',  
+                    audioid: '#choice1-2-rockabilly-audio',  
                     thirdStep: {
                         choice1: {
                             title: 'Rockabilly',
@@ -59,7 +59,7 @@ const choices = {
                 choice1: {
                     title: `Psychedelic rock&co`,
                     imageid: `#psychedelic-poster`,
-                    audioid: '#choice2.1-psychedelic-audio',
+                    audioid: '#choice2-1-psychedelic-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Psychedelic rock',
@@ -85,7 +85,7 @@ const choices = {
                 choice2: {
                     title: `Glam rock&co`,
                     imageid: `#glamrock-poster`,
-                    audioid: '#choice2.2-glamrock-audio',
+                    audioid: '#choice2-2-glamrock-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Glamrock',
@@ -117,7 +117,7 @@ const choices = {
                 choice1: {
                     title: `Rockabilly&co`,
                     imageid: `#rockabilly-poster`,
-                    audioid: '#choice3.1-rockabilly-audio',
+                    audioid: '#choice3-1-rockabilly-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Rockabilly',
@@ -136,7 +136,7 @@ const choices = {
                 choice2: {
                     title: `Psychedelic rock&co`,
                     imageid: `#psychedelic-poster`,
-                    audioid: '#choice3.2-psychedelic-audio',
+                    audioid: '#choice3-2-psychedelic-audio',
                     thirdStep: {
                         choice1: {
                             title: 'Hard rock',
@@ -146,8 +146,8 @@ const choices = {
                         },
                         choice2: {
                             title: `Psychedelic rock`,
-                            imageid: `#psychedelicrock-poster`,
-                            audioid: '#final-psychedelicrock-audio',
+                            imageid: `#psychedelic-poster`,
+                            audioid: '#final-psychedelic-audio',
                             playlist: 'https://open.spotify.com/user/wl90o7hicuin7rl4ec2xi8m0h/playlist/2VE48dIZeU8aKVy7P0oEJ7'
                         }
                     }   
