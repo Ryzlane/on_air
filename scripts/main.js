@@ -95,9 +95,8 @@ const endOfTheGame = (poster, lastChoice) => {
     playlist.href = lastChoice.playlist
     title.innerText = lastChoice.title
 
-
-
     board.style.display = "inherit"
+    board.classList.add('container-in')
 }
 
 buttonStart.addEventListener('click', () => {
