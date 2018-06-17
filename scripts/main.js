@@ -12,10 +12,6 @@ let buttonStart = document.querySelector('.panel button')
 let nextStep = document.querySelector('#next-step')
 let song = document.querySelector('#song')
 
-let endLink = document.querySelector('.container .end-link')
-let endImg = document.querySelector('.container .end-img')
-let playlist = document.querySelector('.container .playlist')
-
 
 let step = 0
 let actualChoices = ""
@@ -84,14 +80,22 @@ const removePosters = (posters) => {
     }
 }
 
-const endOfTheGame = (lastChoice) => {
+const endOfTheGame = (poster, lastChoice) => {
     let board = document.querySelector('.container')
-
+    let endLink = document.querySelector('.container .end-link')
+    let endImg = document.querySelector('.container .end-img')
+    let playlist = document.querySelector('.container .playlist')
+    let title = document.querySelector('.container h1')
+    
     console.log("It's the end of the game as we know it")
+    console.log(poster)
 
-    endImg.href = lastChoice.imgid
-    endLink.src = lastChoice.imgid
+    endImg.src = poster
+    endLink.href = poster
     playlist.href = lastChoice.playlist
+    title.innerText = lastChoice.title
+
+
 
     board.style.display = "inherit"
 }
@@ -108,6 +112,8 @@ for(let i = 0; i < posters.length; i++) {
         console.log(posters[i])
         let lookSongId = posters[i].object3D.el.components.sound.attrValue.src
         let songAsset = document.querySelector(lookSongId).src
+        let lookPosterId = posters[i].object3D.el.components.material.attrValue.src
+        let posterAsset = document.querySelector(lookPosterId).src
         song.src = songAsset
 
         camera.removeAttribute('wasd-controls')
@@ -120,7 +126,7 @@ for(let i = 0; i < posters.length; i++) {
         } else if(step === 2) {
             actualChoices = actualChoices[posters[i].dataset.choice].thirdStep
         } else if(step === 3) {
-            endOfTheGame(actualChoices[posters[i].dataset.choice])
+            endOfTheGame(posterAsset, actualChoices[posters[i].dataset.choice])
         }
         return actualChoices;
     })
