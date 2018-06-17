@@ -1,24 +1,22 @@
 # ON AIR 
-
+Checkout the website here:
 - https://ryzlane.github.io/on_air/
 
 ##  1. Intro
 
-A school project based on rock music
+This is school project based on rock music, made at @ecolehetic.
 
-Have access to the 3D models to download here and put them into a new "objects" folder into the src : https://drive.google.com/drive/u/1/folders/1XuKGS2KAPDd1VgyAj2RJXYAwNyPF8E6X
-
-Hello rocker, you're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
+You're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
 
 ## 2. Instruction
 
- - Step 1 : Home page, wait the end of the loader to start the experience. Read the indicated instructions.
+ - Step 1 : Home page, wait the end of the loader to start the experience. Read the instructions.
  
- - Step 2 : Move in the room with the arrows of the keyboard or the touches zqsd. Move the camera with the mouse. Explore the room, listen the music emanate from the posters. 
+ - Step 2 : Move in the room with the arrows of the keyboard or the WASD. Move the camera with the mouse. Explore the room, listen the music emanating from the posters. 
 
- - Step 3 : After having listening all music from the posters, select /click on the one who emits the music which you prefer. You will be transport in a new scene. A button will appear in front of you for move on to the next stage. 
+ - Step 3 : After having listening all music from the posters, select /click on the one who emits the music you prefer. You will be transported in a new scene. A button will appear in front of you for move on to the next stage. 
 
- - Step 4 :  Repeat the previous operation to the final choice. You will can have your playlist and your poster. 
+ - Step 4 :  Repeat the previous operation until the final choice. You will have a playlist and a poster given, depending on your previous choices. 
 
 ## 3. Features
 
@@ -34,24 +32,24 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 
 ### Assets
 - Font :  Comfortaa. 
-- Images  :  Posters, and textures of wall, ground and hight. 
+- Images  :  Posters, and textures of wall, ground and ceiling. 
 - Musics.
 - 3D Elements/Onjects : Clara.io and Sketchfab.com
-- Playlist spotify.
+- Playlists Spotify.
 
 ### Technos used
-- A-frame (with audioanalyser framework)
+- A-frame (with animations and audioanalyser framework)
 - Javacript vanilla
 
 ## 5. Team
 
-- Ryzlane ARSAC-GOTHIÈRE : Developper Front end - https://github.com/Ryzlane
-- Camille FRIBOULET : Designer UX / UI - Graphiste - https://www.behance.net/camillefri8e26
+- Ryzlane ARSAC-GOTHIÈRE : Developper Front end (welcome on my github!)
+- Camille FRIBOULET : Designer UX / UI - Graphic designer - checkout her behance: https://www.behance.net/camillefri8e26
 
 ## 6. Thanks 
 
-- Bruno Simon
+- @brunosimon, our teacher
 
-- Edouard Haberer : https://github.com/edhbr
+- @edhbr, for his help like always! 
 
- - A special thank to POUPA, baby perfect 3D plastic. https://github.com/Ryzlane/on_air/blob/master/src/img/poupa.png
+ - And a special thank to Poupa, our perfect 3D model. Our relationship was the best. https://github.com/Ryzlane/on_air/blob/master/src/img/poupa.png
