@@ -44,13 +44,13 @@ You're going to be transported in a rock universe (just like in your dreams) to 
 ## 5. Team
 
 - Ryzlane ARSAC-GOTHIÈRE : Developper Front end (welcome on my github!)
-- Camille FRIBOULET : Designer UX / UI - Graphic designer - checkout her behance: https://www.behance.net/camillefri8e26
+- Camille FRIBOULET : Designer UX / UI - Graphic designer - checkout her [behance](https://www.behance.net/camillefri8e26)
 
 ## 6. Thanks 
 
-- @brunosimon, our teacher
+- [@brunosimon](https://github.com/brunosimon), our teacher
 
-- @edhbr, for his help like always! 
+- [@edhbr](https://github.com/edhbr), for his help as usual! 
 
  - And a special thank to Poupa, our perfect 3D model. Our relationship was the best. 
  ![Poupa](https://github.com/Ryzlane/on_air/raw/master/src/img/poupa.png "Poupa")
