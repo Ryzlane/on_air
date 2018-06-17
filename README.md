@@ -52,4 +52,6 @@ You're going to be transported in a rock universe (just like in your dreams) to 
 
 - @edhbr, for his help like always! 
 
- - And a special thank to Poupa, our perfect 3D model. Our relationship was the best. https://github.com/Ryzlane/on_air/blob/master/src/img/poupa.png
+ - And a special thank to Poupa, our perfect 3D model. Our relationship was the best. 
+ ![Poupa](https://github.com/Ryzlane/on_air/raw/master/src/img/poupa.png "Poupa")
+
