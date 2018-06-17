@@ -1,9 +1,10 @@
 AFRAME.registerComponent("passthrough", {
     init: function() {
-    let animCameraOut = document.querySelector("#camera-out");
-    let animCameraRotation = document.querySelector("#camera-rotation");
-    let animButton = document.querySelector("#button-animation");
-    let animText = document.querySelector("#text-animation");
+    let animCameraOut = document.querySelector("#camera-out")
+    let animCameraRotation = document.querySelector("#camera-rotation")
+
+    let animButton = document.querySelector("#button-animation")
+    let animText = document.querySelector("#text-animation")
 
       this.el.addEventListener("click", (e) => {
         animCameraRotation.emit('rotate-camera')
@@ -31,8 +32,13 @@ AFRAME.registerComponent('go-back-in-the-game', {
   init: function() {
     let animCameraIn = document.querySelector("#camera-in");
 
+    let animButtonDown = document.querySelector("#button-animation-down")
+    let animTextDown = document.querySelector("#text-animation-down")
+
       this.el.addEventListener("click", (e) => {
         animCameraIn.emit("go-back")
+        animButtonDown.emit("down-button")
+        animTextDown.emit("down-text")
       })
 
     }

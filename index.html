@@ -103,12 +103,14 @@
             <!-- Spectrum visualization. -->
             <a-entity audioanalyser-levels-scale="analyserEl: #analyser; max: 50; multiplier: 0.06" entity-generator="mixin: bar; num: 128" layout="type: circle; radius: 16" rotation="0 0 0"></a-entity>
             <!-- Button to go back in the game -->
-            <a-box go-back-in-the-game id="next-step" geometry="height:0.5; width:1.5" material="color:#E30613" position="0 -10 -13">
-                 <a-animation id="button-animation" delay ="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 1.5 -13" begin="mounting"></a-animation>
-            </a-box>
+            <a-box go-back-in-the-game id="next-step" geometry="width:2;depth:0.5;height:0.5" material="color:#E30613" position="0 -10 -13">
+                <a-animation id="button-animation" delay="3000" attribute="position" dur="2000" easing="linear" from="0 -10 -13" to="0 0.252 -13" begin="mounting"></a-animation>
+                <a-animation id="button-animation-down" delay="3000" attribute="position" dur="2000" easing="linear" from="0 0.252 -13" to="0 -10 -13" begin="down-button"></a-animation>
+           </a-box>
             <!-- Txt -->
-            <a-entity position="-0.002 -10 -12.257" text="width:3; color:white; value: Click for the next step; align: center">
-                <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 1.479 -12.257" begin="mounting-text"></a-animation>
+            <a-entity position="-0.002 -10 -12.257" text="align:center; color:white; value:Click for the next step; width:3">
+                <a-animation id="text-animation" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 -10 -12.257" to="-0.002 0.289 -12.594" begin="mounting-text"></a-animation>
+                <a-animation id="text-animation-down" delay="3250" attribute="position" dur="2000" easing="linear" from="-0.002 0.289 -12.594" to="-0.002 -10 -12.257" begin="down-text"></a-animation>
             </a-entity>
             
             <!-- INSIDE THE BAR-->
@@ -147,7 +149,7 @@
             <a-gltf-model id="beer-bottle-1" src="src/objects/shelf/scene.gltf" position="-1.369 2.552 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
             <a-gltf-model id="beer-bottle-2" src="src/objects/shelf/scene.gltf" position="-3.122 1.752 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>
             <a-gltf-model id="beer-bottle-3" src="src/objects/shelf/scene.gltf" position="-2.014 0.979 11.467" gltf-model="src/objects/beer-bottle/scene.gltf" rotation="0 180 0" scale="0.05 0.05 0.05"></a-gltf-model>                             
-            <a-gltf-model id="door" src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="4.221 0 11.739"></a-gltf-model>
+            <a-gltf-model id="door" src="src/objects/door/scene.gltf" scale="0.47 0.47 0.47" position="4.221 0 11.802"></a-gltf-model>
             <a-gltf-model id="piano" src="src/objects/piano/scene.gltf" position="-7.058 0 8.253" scale="1.5 1.5 1.5" gltf-model="src/objects/piano/scene.gltf"></a-gltf-model>
             
 
