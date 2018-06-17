@@ -43,16 +43,16 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 - A-frame (with audioanalyser framework)
 - Javacript vanilla
 
-## 5. L'équipe 
+## 5. Team
 
-- Ryzlane ARSAC-GOTHIÈRE : Developper Front end
-- Camille FRIBOULET : Designer UX / UI - Graphiste 
+- Ryzlane ARSAC-GOTHIÈRE : Developper Front end - https://github.com/Ryzlane
+- Camille FRIBOULET : Designer UX / UI - Graphiste - https://www.behance.net/camillefri8e26
 
 ## 6. Thanks 
 
-Bruno Simon
+- Bruno Simon
 
-Edouard Haberer : 
+- Edouard Haberer : https://github.com/edhbr
 
-A special thank to POUPA, baby perfect plastic.
+ - A special thank to POUPA, baby perfect 3D plastic.
 ![My image](username.github.com/on_air/src/img/poupa.png)
