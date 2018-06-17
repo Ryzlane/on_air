@@ -11,6 +11,7 @@ Have access to the 3D models to download here and put them into a new "objects" 
 Hello rocker, you're going to be transported in a rock universe (just like in your dreams) to discover which rock style suits you perfectly. Yeah, our algorithms are really powerfull.
 
 ## 2. Instruction
+
  - Step 1 : Home page, wait the end of the loader to start the experience. Read the indicated instructions.
  
  - Step 2 : Move in the room with the arrows of the keyboard or the touches zqsd. Move the camera with the mouse. Explore the room, listen the music emanate from the posters. 
@@ -40,7 +41,6 @@ Hello rocker, you're going to be transported in a rock universe (just like in yo
 ### Technos used
 - A-frame (with audioanalyser framework)
 - Javacript vanilla
-
 
 ## 5. L'équipe 
 
