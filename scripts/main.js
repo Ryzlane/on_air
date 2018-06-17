@@ -12,6 +12,9 @@ let buttonStart = document.querySelector('.panel button')
 let nextStep = document.querySelector('#next-step')
 let song = document.querySelector('#song')
 
+let endLink = document.querySelector('.container .end-link')
+let endImg = document.querySelector('.container .end-img')
+let playlist = document.querySelector('.container .playlist')
 
 
 let step = 0
@@ -81,8 +84,16 @@ const removePosters = (posters) => {
     }
 }
 
-const endOfTheGame = () => {
+const endOfTheGame = (lastChoice) => {
+    let board = document.querySelector('.container')
+
     console.log("It's the end of the game as we know it")
+
+    endImg.href = lastChoice.imgid
+    endLink.src = lastChoice.imgid
+    playlist.href = lastChoice.playlist
+
+    board.style.display = "inherit"
 }
 
 buttonStart.addEventListener('click', () => {
@@ -109,7 +120,7 @@ for(let i = 0; i < posters.length; i++) {
         } else if(step === 2) {
             actualChoices = actualChoices[posters[i].dataset.choice].thirdStep
         } else if(step === 3) {
-            endOfTheGame()
+            endOfTheGame(actualChoices[posters[i].dataset.choice])
         }
         return actualChoices;
     })
